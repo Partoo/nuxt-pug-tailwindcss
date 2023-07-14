@@ -1,8 +1,10 @@
 <template lang="pug">
-div.flex.justify-center.items-center.h-screen.bg-blue-900.text-white.font-bold.text-5xl EVENT {{ id }}
+div.h-screen.bg-blue-900.text-white.font-bold.text-5xl EVENT {{ id }}
+  p
+    nuxt-link(to="/events")
+      IconsHome
 </template>
 <script setup>
-import {useNuxtApp} from "#app";
 
 const router = useRoute()
 const { id } = router.params
