@@ -19,5 +19,15 @@ export default defineNuxtConfig({
   },
   css: [
     '~/assets/style/main.scss'
-  ]
+  ],
+  ssr: true,
+    experimental: {
+        payloadExtraction: false
+    },
+    router: {
+        options: {
+            strict: false
+        }
+    },
+    sourcemap: false
 })
